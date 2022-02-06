@@ -157,9 +157,9 @@ USE_DEVICE_SPECIFIC_GPS := true
 
 # HALs
 USE_DEVICE_SPECIFIC_AUDIO := true
-USE_DEVICE_SPECIFIC_MEDIA := true
+#USE_DEVICE_SPECIFIC_MEDIA := true
 DEVICE_SPECIFIC_AUDIO_PATH := hardware/qcom/audio-caf/msm8998
-DEVICE_SPECIFIC_MEDIA_PATH := hardware/qcom/media-caf/msm8998
+#DEVICE_SPECIFIC_MEDIA_PATH := hardware/qcom/media-caf/msm8998
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
