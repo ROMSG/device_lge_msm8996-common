@@ -240,7 +240,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
-       
+
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=6a00000.dwc3 \
