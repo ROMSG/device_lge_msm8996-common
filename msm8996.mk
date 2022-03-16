@@ -85,7 +85,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@2.0-impl \
-    android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio@6.0 \
     android.hardware.audio@6.0-impl \
@@ -336,7 +335,13 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+<<<<<<< HEAD
   
+=======
+
+
+
+>>>>>>> 0f00d9db... Audio: android.hardware.audio@2.0-service is outdated. Repalce it with android.hardware.audio.service.
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep \
