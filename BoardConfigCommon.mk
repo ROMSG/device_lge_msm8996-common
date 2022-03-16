@@ -49,7 +49,7 @@ HWUI_COMPILE_FOR_PERF := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
@@ -158,7 +158,7 @@ USE_DEVICE_SPECIFIC_GPS := true
 # HALs
 USE_DEVICE_SPECIFIC_AUDIO := true
 #USE_DEVICE_SPECIFIC_MEDIA := true
-DEVICE_SPECIFIC_AUDIO_PATH := hardware/qcom/audio-caf/msm8998
+DEVICE_SPECIFIC_AUDIO_PATH := hardware/qcom/audio-caf/msm8996
 #DEVICE_SPECIFIC_MEDIA_PATH := hardware/qcom/media-caf/msm8998
 
 # HIDL
