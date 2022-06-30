@@ -42,8 +42,8 @@ TARGET_BOARD_PLATFORM := msm8996
 # BCM wireless
 BOARD_HAVE_BCM_FM := true
 BOARD_HAVE_BCM_FM_SYSFS := "/sys/bus/platform/drivers/bcm_ldisc/bcm_ldisc/"
-BOARD_BRCM_HCI_NUM := 26
-N_BRCM_HCI := 26
+BOARD_BRCM_HCI_NUM := 25
+N_BRCM_HCI := 25
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/bluetooth/libbt_vndcfg.txt
