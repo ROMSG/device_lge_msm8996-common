@@ -215,6 +215,14 @@
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
 
+# BT/FM/ANT+ V4L2
+/dev/brcm_bt_drv          0660   bluetooth  net_bt_stack
+/dev/radio1               0660   system     net_bt_stack
+/dev/rfcomm0              0660   bluetooth  bluetooth
+/dev/ttyUSB0              0660   bluetooth  bluetooth
+/dev/smd3                 0660   bluetooth  net_bt_stack
+/dev/smd2                 0660   bluetooth  net_bt_stack
+
 # BT
 /dev/hidraw*              0666   system     system
 /dev/rfkill               0660   bluetooth  bluetooth
