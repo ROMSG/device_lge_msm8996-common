@@ -39,6 +39,15 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo
 
 TARGET_BOARD_PLATFORM := msm8996
 
+# BCM wireless
+BOARD_HAVE_BCM_FM := true
+BOARD_HAVE_BCM_FM_SYSFS := "/sys/bus/platform/drivers/bcm_ldisc/bcm_ldisc/"
+BOARD_BRCM_HCI_NUM := 26
+N_BRCM_HCI := 26
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8996
@@ -88,12 +97,6 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
-# Bluetooth
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/bluetooth/libbt_vndcfg.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
-
 # Camera
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/hw/camera.msm8996.so|/system/vendor/lib/libshim_camera.so \
@@ -131,9 +134,6 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
-
-# FM Radio
-BOARD_HAVE_BCM_FM := true
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default

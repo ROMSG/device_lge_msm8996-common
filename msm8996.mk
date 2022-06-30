@@ -40,7 +40,7 @@ $(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 # Broadcom Bluetooth config
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+    $(COMMON_PATH)device/lge/msm8996-common/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 
 # Permissions
@@ -267,7 +267,7 @@ PRODUCT_COPY_FILES += \
 
 # Miracast
 PRODUCT_PROPERTY_OVERRIDES += \
-		persist.debug.wfd.enable=1
+    persist.debug.wfd.enable=1
 
 # Net
 PRODUCT_PACKAGES += \
