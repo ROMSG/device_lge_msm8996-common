@@ -17,8 +17,6 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
-#define HCILP_INCLUDED FALSE
-#define BT_WAKE_VIA_USERIAL_IOCTL FALSE
 
 #pragma push_macro("PROPERTY_VALUE_MAX")
 

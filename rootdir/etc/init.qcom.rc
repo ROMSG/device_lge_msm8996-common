@@ -165,24 +165,6 @@ on boot
     chown system drmrpc /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
     write /sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input0/update_fw 1
 
-    # Bluetooth
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
-    # bluetooth LPM
-    chown bluetooth bluetooth /proc/bluetooth/sleep/lpm
-    chown bluetooth bluetooth /proc/bluetooth/sleep/btwrite
-
-    # BT DUN port-bridge
-    chmod 0660 /dev/smd7
-    chown bluetooth bluetooth /dev/smd7
-
-    chmod 0660 /sys/class/rfkill/rfkill0/state
-    chown bluetooth bluetooth /dev/ttyHS0
-    chmod 0660 /dev/ttyHS0
-    chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
-    chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
-    
-    
     # Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
@@ -254,7 +236,7 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
-    # Set the console loglevel to KERN_INFO
+    # Set the console loglevel to < KERN_INFO
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "7 6 1 7"
 
@@ -431,9 +413,6 @@ on post-fs-data
     # Create directory used for camera
     mkdir /data/vendor/camera 0770 camera camera
 
-    # Create directory used for bluetooth
-    mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
-    
     #Create directories for Fingerprint
     mkdir /data/vendor/misc/qti_fp 0770 system system
     mkdir /data/vendor/misc/qti_fp/bg_estimation 0770 system system
@@ -711,15 +690,6 @@ service vendor.imsrcsservice /vendor/bin/imsrcsd
    user system
    group radio diag inet log
    disabled
-   
-# brcm-uim-sysfs (BT/FM/ANT+)
- service uim /system/bin/brcm-uim-sysfs
-    class late_start
-    user root
-    group bluetooth net_bt_admin net_bt
-    seclabel u:r:uim:s0
-
-
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
    start vendor.ims_rtp_daemon

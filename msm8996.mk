@@ -35,13 +35,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 560dpi
 
-# Broadcom WiFi config files
-$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
-
-# Broadcom Bluetooth config
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
-
+# Add WiFi Config files
+# TEMP: These are broken right now
+#$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -167,12 +163,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey
-    
-# FM
-PRODUCT_PACKAGES += \
-    FMRadio \
-    brcm-uim-sysfs \
-    libfmjni
 
 # Recovery
 PRODUCT_PACKAGES += \
