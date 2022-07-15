@@ -51,7 +51,7 @@ HWUI_COMPILE_FOR_PERF := true
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive #TEMP
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_IMAGE_NAME := Image.lz4-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
 BOARD_RAMDISK_OFFSET := 0x02200000
@@ -59,6 +59,9 @@ BOARD_RAMDISK_OFFSET := 0x02200000
 #GCC
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/aarch64/gcc-10.3-aarch64/bin/aarch64-none-elf-
 TARGET_KERNEL_CROSS_COMPILE_PREFIX_ARM32 := $(PWD)/prebuilts/gcc/linux-x86/arm/gcc-10.3-arm/bin/arm-none-eabi-
+
+TARGET_KERNEL_NEW_GCC_COMPILE := true
+
 
 # Audio
 USE_DEVICE_SPECIFIC_AUDIO := true
@@ -100,11 +103,9 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 # Camera
-TARGET_LD_SHIM_LIBS := \
-    /system/vendor/lib/hw/camera.msm8996.so|/system/vendor/lib/libshim_camera.so \
-    /system/vendor/lib/libmmcamera_ppeiscore.so|/system/vendor/lib/libshim_camera.so
 USE_CAMERA_STUB := true
 USE_DEVICE_SPECIFIC_CAMERA := true
+TARGET_USES_QTI_CAMERA_DEVICE := true
 
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /vendor/bin/mm-qcamera-daemon=28

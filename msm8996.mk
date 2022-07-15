@@ -115,16 +115,18 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@2.0 \
+    android.hardware.broadcastradio@2.0-impl \
     FMRadio \
     brcm-uim-sysfs \
     libfmjni
+
 
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     camera.device@3.2-impl \
-    libshim_camera \
     Snap
 
 # Charger
