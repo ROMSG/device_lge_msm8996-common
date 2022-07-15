@@ -114,7 +114,7 @@ PRODUCT_PACKAGES += \
     libbt-vendor
 
 # FM
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@2.0 \
     android.hardware.broadcastradio@2.0-impl \
     FMRadio \
