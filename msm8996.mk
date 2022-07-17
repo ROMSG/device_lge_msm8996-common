@@ -347,13 +347,7 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-<<<<<<< HEAD
-  
-=======
 
-
-
->>>>>>> 0f00d9db... Audio: android.hardware.audio@2.0-service is outdated. Repalce it with android.hardware.audio.service.
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep \
