@@ -289,7 +289,6 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
     libextmedia_jni \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -299,7 +298,9 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libOmxVdecHevc \
+    libstagefrighthw \
+    libmm-omxcore
 
 # Power
 PRODUCT_PACKAGES += \
