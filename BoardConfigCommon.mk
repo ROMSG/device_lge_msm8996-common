@@ -145,9 +145,15 @@ LOC_HIDL_VERSION := 3.0
 USE_DEVICE_SPECIFIC_GPS := true
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 TARGET_FS_CONFIG_GEN += $(COMMON_PATH)/config.fs
+
+# HIDL Manifest
+TARGET_USES_CUSTOM_MANIFEST := false
+
+ifneq ($(TARGET_USES_CUSTOM_MANIFEST), false)
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+endif
 
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
