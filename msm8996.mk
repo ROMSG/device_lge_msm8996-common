@@ -115,13 +115,8 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-<<<<<<< HEAD
     android.hardware.broadcastradio@2.0 \
     android.hardware.broadcastradio@2.0-impl \
-=======
- 		android.hardware.broadcastradio@2.0 \
-		android.hardware.broadcastradio@2.0-impl \
->>>>>>> 877c0a3d... Use broadcast radio hall
     FMRadio \
     brcm-uim-sysfs \
     libfmjni
