@@ -67,10 +67,6 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX_ARM32 := $(PWD)/prebuilts/gcc/linux-x86/arm/g
 
 TARGET_KERNEL_NEW_GCC_COMPILE := true
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 #CAF AUDIO
 USE_DEVICE_SPECIFIC_AUDIO := true
 DEVICE_SPECIFIC_AUDIO_PATH := hardware/qcom-caf/msm8996/audio
@@ -115,9 +111,6 @@ PRODUCT_COPY_FILES += \
 USE_CAMERA_STUB := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
-
-TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-    /vendor/bin/mm-qcamera-daemon=28
 
 # CMHW
 BOARD_HARDWARE_CLASS += $(COMMON_PATH)/lineagehw
