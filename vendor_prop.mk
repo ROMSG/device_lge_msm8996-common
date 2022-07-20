@@ -40,7 +40,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bt.bdaddr_path=/data/misc/bluetooth/bdaddr
+    ro.bt.bdaddr_path=/data/misc/bluetooth/bdaddr \
+    ro.rfkilldisabled=1 # Disable for libbt, handled by brcm-uim-sysfs
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -155,7 +156,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable.pq=true \
-    vendor.video.disable.ubwc=1
+    vendor.video.disable.ubwc=1 \
+    vidc.enc.dcvs.extra-buff-count=2
+
+# Netflix
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q660-13149-1
     
 # OpenGLES
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -238,10 +244,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sensors.wul_delay=3000 \
     persist.sensors.onhand.en=0
 
+# SoC
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.soc.manufacturer=Qualcomm \
+    ro.soc.model=MSM8996
+
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
-       
+
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=6a00000.dwc3 \

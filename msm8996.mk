@@ -85,7 +85,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@2.0-impl \
-    android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio@6.0 \
     android.hardware.audio@6.0-impl \
@@ -114,13 +113,24 @@ PRODUCT_PACKAGES += \
     hwaddrs \
     libbt-vendor
 
+# FM
+PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@2.0 \
+    android.hardware.broadcastradio@2.0-impl \
+    FMRadio \
+    brcm-uim-sysfs \
+    libfmjni
+    
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     camera.device@3.2-impl \
-    libshim_camera \
-    Snap
+    camera.msm8996 \
+    mm-qcamera-app \
+    Snap \
+    libmm-qcamera \
+    libfui
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -279,20 +289,18 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libhypv_intercept \
-    libmm-omxcore \
+    libextmedia_jni \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
+    libOmxG711Enc \
     libOmxQcelp13Enc \
     libOmxVdec \
-    libOmxVdecHevc \
     libOmxVenc \
-    libOmxVidcCommon \
+    libOmxVdecHevc \
     libstagefrighthw \
-    libstagefright_soft_flacdec
+    libmm-omxcore
 
 # Power
 PRODUCT_PACKAGES += \
@@ -339,7 +347,7 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-  
+
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep \
