@@ -55,6 +55,11 @@ BOARD_KERNEL_IMAGE_NAME := Image.lz4-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
 BOARD_RAMDISK_OFFSET := 0x02200000
+TARGET_KERNEL_SOURCE := kernel/lge/msm8996
+
+# Prebuilt Kernel
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := device/lge/kernel/Image.lz4-dtb
 
 #GCC
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/aarch64/gcc-10.3-aarch64/bin/aarch64-none-elf-
@@ -62,7 +67,10 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX_ARM32 := $(PWD)/prebuilts/gcc/linux-x86/arm/g
 
 TARGET_KERNEL_NEW_GCC_COMPILE := true
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 #CAF AUDIO
 USE_DEVICE_SPECIFIC_AUDIO := true
 DEVICE_SPECIFIC_AUDIO_PATH := hardware/qcom-caf/msm8996/audio
@@ -149,9 +157,15 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 TARGET_FS_CONFIG_GEN += $(COMMON_PATH)/config.fs
 
 # HIDL Manifest
+<<<<<<< Updated upstream
 TARGET_USES_CUSTOM_MANIFEST := false
 
 ifneq ($(TARGET_USES_CUSTOM_MANIFEST), false)
+=======
+TARGET_USES_CUSTOM_MANIFEST := true
+
+ifeq ($(TARGET_USES_CUSTOM_MANIFEST), false)
+>>>>>>> Stashed changes
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 endif
 
@@ -191,6 +205,9 @@ SELINUX_IGNORE_NEVERALLOWS := true
 
 # Thermal
 USE_DEVICE_SPECIFIC_THERMAL := true
+
+# USB	
+BOARD_KERNEL_CMDLINE += androidboot.usbconfigfs=true
 
 # QTI
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
