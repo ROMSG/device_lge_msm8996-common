@@ -104,6 +104,8 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 # Camera
+TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
+    /vendor/bin/mm-qcamera-daemon=26
 USE_CAMERA_STUB := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
