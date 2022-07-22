@@ -50,7 +50,12 @@ HWUI_COMPILE_FOR_PERF := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 
+<<<<<<< HEAD
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+=======
+#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive #TEMP
+BOARD_KERNEL_IMAGE_NAME := Image.lz4-dtb
+>>>>>>> 77b2fba5... Move to oss camera hal
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
 BOARD_RAMDISK_OFFSET := 0x02200000
@@ -119,7 +124,9 @@ TARGET_LD_SHIM_LIBS := \
 
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /vendor/bin/mm-qcamera-daemon=26
-
+TARGET_USES_QTI_CAMERA_DEVICE := true
+TARGET_SUPPORT_HAL1 := false
+BOARD_QTI_CAMERA_32BIT_ONLY := true
 USE_CAMERA_STUB := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
