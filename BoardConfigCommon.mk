@@ -58,7 +58,7 @@ TARGET_KERNEL_SOURCE := kernel/lge/msm8996
 
 # Prebuilt Kernel
 TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.lz4-dtb
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/msm8996-common/prebuilt/Image.lz4-dtb
 
 #GCC
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/aarch64/gcc-10.3-aarch64/bin/aarch64-none-elf-
