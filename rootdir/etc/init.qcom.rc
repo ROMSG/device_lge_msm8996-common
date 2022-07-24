@@ -378,6 +378,7 @@ on boot
 
     # Enable ZRAM on boot_complete
     swapon_all fstab.qcom
+    
 service vendor.conn_init /vendor/bin/hwaddrs
     class core
     user root
