@@ -22,6 +22,7 @@ COMMON_PATH := device/lge/msm8996-common
 
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -58,7 +59,7 @@ TARGET_KERNEL_SOURCE := kernel/lge/msm8996
 
 # Prebuilt Kernel
 TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/msm8996-common/prebuilt/Image.lz4-dtb
+TARGET_PREBUILT_KERNEL := device/lge/msm8996-common/prebuilt/Image.lz4-dtb
 
 #GCC
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/aarch64/gcc-10.3-aarch64/bin/aarch64-none-elf-

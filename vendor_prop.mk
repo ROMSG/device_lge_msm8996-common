@@ -225,10 +225,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.min.fling_velocity=8000
 	persist.sys.scrollingcache=3
 
-# Security Patch Level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2017-11-16
-
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.sensors.hal=e \

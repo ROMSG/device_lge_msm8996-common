@@ -360,9 +360,9 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libxml2
 
-# Treble
-PRODUCT_PACKAGES += \
-    vndk-sp \
+# VNDK
+PRODUCT_HOST_PACKAGES += \
+    libdexfile
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-v28.so \
@@ -434,7 +434,7 @@ PRODUCT_PACKAGES += \
 # Duck Duck Go
 PRODUCT_PACKAGES += \
     DDG
-  
-# Microg Settings
-#WITH_GMS := true
     
+    # loggy
+PRODUCT_PACKAGES += \
+    loggy.sh
