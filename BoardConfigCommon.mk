@@ -116,12 +116,11 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/hw/camera.msm8996.so|/system/vendor/lib/libshim_camera.so \
     /system/vendor/lib/libmmcamera_ppeiscore.so|/system/vendor/lib/libshim_camera.so
-
-TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
-    /vendor/bin/mm-qcamera-daemon=26
-
 USE_CAMERA_STUB := true
 USE_DEVICE_SPECIFIC_CAMERA := true
+
+TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
+    /vendor/bin/mm-qcamera-daemon=28
 
 # CMHW
 BOARD_HARDWARE_CLASS += $(COMMON_PATH)/lineagehw
