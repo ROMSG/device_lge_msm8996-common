@@ -70,9 +70,9 @@ write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
 write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "schedutil"
 
 # set schedutil adjustments
-write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 10000
+write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 25000
 write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 250
-write /sys/devices/system/cpu/cpu2/cpufreq/schedutil/down_rate_limit_us 10000
+write /sys/devices/system/cpu/cpu2/cpufreq/schedutil/down_rate_limit_us 20000
 write /sys/devices/system/cpu/cpu2/cpufreq/schedutil/up_rate_limit_us 250
 
 # re-enable thermal hotplug
